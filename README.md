@@ -1,2 +1,3 @@
 # WeHelp
-Help.
+## What we do.
+We do what we can 👍🏽.
