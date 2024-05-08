@@ -1,70 +1,53 @@
-# Getting Started with Create React App
+<h2 align="center">Personal Portfolio <br/> <a target="_blank" href="https://portfolio-devanshsahni.vercel.app/">devanshsahni</a></h2>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br/>
 
-## Available Scripts
+## Fork 
+<p>Feel free to fork this repo to modify and make changes of your own. Please give me proper credit by linking it back to this repo. Thanks! 
+  <br/> 
+  The design for this project is inspired by <a href="https://github.com/soumyajit4419/Portfolio">Saumjyajit's portfolio.</a></p>
 
-In the project directory, you can run:
+## About 
+<p>This project is my personal portfolio which features some of my skills, GitHub projects and my resume.</p>
+<p>These technologies are used to build this website:</p>
+<ul>
+  <li>React.js</li>
+  <li>Git</li>
+  <li>npm packages</li>
+  <li>Vercel</li>
+</ul>
 
-### `npm start`
+<p>Some of the features of this website are:</p>
+<ul>
+  <li>Multi-page layout</li>
+  <li>Fully responsive</li>
+  <li>Preloader</li>
+  <li>Refresh on clicking logo</li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<p>npm packages used:</p>
+<ul>
+  <li><a target="_blank" href="https://www.npmjs.com/package/lottie-react">lottie-react</a>: For the animations used in the website.</li>
+  <li><a href="https://www.npmjs.com/package/react-spinners">react-spinners</a>: For the preloader animation.</li>
+  <li><a href="https://www.npmjs.com/package/react-icons">react-icons</a>: For all the icons.</li>
+  <li><a href="https://www.npmjs.com/package/typewriter-effect">typewriter-effect</a>: The typing effect on the home page.</li>
+  <li><a href="https://www.npmjs.com/package/react-pdf">react-pdf</a>: To preview the resume pdf</li>
+  <li><a href="https://www.npmjs.com/package/react-parallax-tilt">react-parallax-tilt</a>: To apply tilt hover effect on react components like image and animation.</li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
 
-### `npm test`
+## Getting started 🛠️
+<p>You need to have git installed on your system to modify this repo.</p>
+<ol>
+  <li>Fork this repo from the fork option on top of my GitHub repo.</li>
+  <li>After completing the fork, move to the copied repo in your account and copy the HTTPS link from the code option.</li>
+  <li>Now in the terminal of your system(in vs code or any third party terminal) cd over to the location where you want to store this project & write, git clone copied link</li>
+  <li>This would create a copy in your local system and link it to the forked repo.</li>
+  <li>Now open this project in your desirable IDE and in the terminal write npm i, this would install all the necessary npm packages.</li>
+  <li>You can write npm start in the terminal to open the project in development mode. Open http://localhost:3000 to view in the browser. This page should reload when you make any changes.</li>
+</ol>
+<p>You can browse the project and make changes according to your will.</p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Support
+<p>Show your support by leaving a star ⭐ on this repo, if you like the website.</p>
+<p>Fell free to point out any bugs🪲 or improvements in the issues tab.</p>
