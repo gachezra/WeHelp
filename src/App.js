@@ -1,18 +1,14 @@
-// import logo from './logo.svg';
-// import './App.css';
+import './App.css';
 
-//import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-
-//components
+//pages
 import NavBar from './components/NavBar';
-import HomePage from './pages/HomePage';
-
+import Home from './pages/Home';
 
 function App() {
   return (
     <>
-      <NavBar/>
-      <HomePage/>
+    <NavBar/>
+    <Home/>
     </>
   );
 }
