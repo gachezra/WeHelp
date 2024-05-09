@@ -1,21 +1,11 @@
-<h2 align="center">Personal Portfolio <br/> <a target="_blank" href="https://portfolio-devanshsahni.vercel.app/">devanshsahni</a></h2>
+<h2 align="center">
+  <br/>
+  <a target="_blank" href="https://wehelp.org/">
+    WeHelp 
+  </a>
+</h2>
 
 <br/>
-
-## Fork 
-<p>Feel free to fork this repo to modify and make changes of your own. Please give me proper credit by linking it back to this repo. Thanks! 
-  <br/> 
-  The design for this project is inspired by <a href="https://github.com/soumyajit4419/Portfolio">Saumjyajit's portfolio.</a></p>
-
-## About 
-<p>This project is my personal portfolio which features some of my skills, GitHub projects and my resume.</p>
-<p>These technologies are used to build this website:</p>
-<ul>
-  <li>React.js</li>
-  <li>Git</li>
-  <li>npm packages</li>
-  <li>Vercel</li>
-</ul>
 
 <p>Some of the features of this website are:</p>
 <ul>
