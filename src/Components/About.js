@@ -15,7 +15,6 @@ const About = () => {
           <p>
             We are a passionate team dedicated to making a positive impact on the lives of individuals in need. 
             Our mission is to create a supportive community where everyone has access to essential resources and assistance.
-            {/* Apart from coding I love to do photography, you can check out some of my shots here <a href="https://www.instagram.com/devansh_sahni_/?hl=en" target='_blank'>Instagram.</a> */}
           </p>
           <br/>
           <b>Our Mission</b>
@@ -45,7 +44,7 @@ const About = () => {
               <Lottie 
               className="illustration mb-3" 
               animationData={rise} 
-              loop={true} 
+              loop={false} 
             />
           </Tilt>
           <Tilt>

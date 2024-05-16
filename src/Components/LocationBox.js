@@ -1,68 +1,101 @@
-import React from 'react';
-import {FaGithub} from "react-icons/fa";
+import React, { useState, useEffect, useRef } from 'react';
+import { BiDonateHeart } from "react-icons/bi";
+import { Link } from 'react-router-dom';
+import { MdOutlineSensorOccupied } from "react-icons/md";
 
+const locations = [
+  { name: "New York", latitude: 37.0902, longitude: -95.7129 },
+  { name: "Nairobi", latitude: 1.2921, longitude: 36.8219 },
+];
 
-const  LocationBox = ({locationPhoto, locationName}) => {
-  const desc = {
-    TindogDesc : "This website is a landing page of Tinder but for dogs. It is a responsive website which was made to understand Bootstrap. I also learned how to host my project on Github and then how to deploy that project using Github pages.",
-    TindogGithub : "https://github.com/DevanshSahni/tindog",
-    TindogWebsite : "https://devanshsahni.github.io/tindog/",
+// Updated desc object with an image property
+const desc = [
+  { name: "Settings", description: "Manage your settings"},
+];
 
-    // RogFreeDesc : "A website that shows you over seven specialized yoga postures for specific diseases or health problems. This was a group project made in a team of two for a 36-hour-long online hackathon named Hackodisha 2.0.",
-    // RogFreeGithub : "https://github.com/DevanshSahni/Rog-Free",
-    // RogFreeWebsite : "https://devanshsahni.github.io/Rog-Free/",
+const LocationBox = ({ locationName, locationPhoto, onSelect }) => {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+  const [selectedLocationName, setSelectedLocationName] = useState("New York"); // Default to New York
+  const dropdownRef = useRef(null);
 
-    // NewsletterDesc:"A newsletter signup site made using Mailchimp API where the signups can be monitored from the MailChimp account. This project was made to understand API integration, environment variables and vercel deployment.",
-    // NewsletterGithub:"",
-    // NewsletterWebsite:"https://newsletter-signup-teal.vercel.app/",
-    
-    // WigglesDesc:"An innovative pet management web app enabling pet parents to create unique pet IDs, securely store and share vaccination records, and generate QR codes for pet profiles, enhancing safety.",
-    // WigglesGithub:"https://github.com/DevanshSahni/Wiggles",
-    // WigglesWebsite:"https://wiggles.vercel.app/",
-  }
+  const toggleDropdown = (event) => {
+    event.stopPropagation();
+    setDropdownOpen(!dropdownOpen);
+  };
 
-  let show ='';
-  if(desc[locationName + 'Github']===""){
-    show="none";
-  }
-    
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [dropdownRef]);
+
+  const handleSelect = (location) => {
+  // Assuming each location object now includes latitude and longitude
+  const locationWithCoords = {
+      ...location,
+      latitude: location.latitude, // Example latitude value
+      longitude: location.longitude // Example longitude value
+    };
+    onSelect(locationWithCoords);
+    setSelectedLocationName(location.name);
+    setDropdownOpen(false);
+  };
+
   return (
-    <div className='locationBox'> 
-        <img className='locationPhoto' src={locationPhoto} alt="location display" /> 
-        <div>
-            <br />
-            <h3>{locationName}</h3>
-            <br />
-            {desc[locationName + 'Desc']}
-            <br />
-
-            <a style={{display:show}} href={desc[locationName + 'Github']} target=''>  
-              <button id="dropdownHoverButton" data-dropdown-toggle="dropdownHover" data-dropdown-trigger="hover" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-                Locations
-                <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
-                  <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
-                </svg>
-              </button>
-              <div id="dropdownHover" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700">
-                  <ul class="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton">
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Dashboard</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Settings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Earnings</a>
-                    </li>
-                    <li>
-                      <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white">Sign out</a>
-                    </li>
-                  </ul>
-              </div>
-            </a>
+    <div className='locationBox'>
+      <img className='block w-full my-5' src={locationPhoto || "/path/to/default-image.jpg"} alt={`${locationName} display`} />
+      <div>
+        <br/>
+        <h3>{desc.name || 'Default Location'}</h3>
+        <br/>
+        <p className='text-center tw-bold text-2xl mt-4 mb-5'>{desc.description || 'No description available'}</p>
+        <div className="relative" ref={dropdownRef}>
+          <button id="dropdownHoverButton" className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center inline-flex items-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button" onClick={toggleDropdown}>
+            {selectedLocationName}
+            <svg className="w-2.5 h-2.5 ml-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+            </svg>
+          </button>
+          <div id="dropdownHover" className={`${dropdownOpen ? '' : 'hidden'} absolute bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700`}>
+            <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))' }}>
+              {locations.map((location) => (
+                <li key={location.name} style={{ margin: '5px' }}>
+                  <a href={location.url} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                    onClick={(e) => {
+                      e.preventDefault(); // Prevent the default anchor link behavior
+                      handleSelect(location); // Update the selected location
+                    }}>
+                    {location.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
+      </div>
+          <div className="mt-10 sm:flex sm:justify-center sm:space-x-4">
+            <Link to={`/donate/${locationName}`}>
+                <button className="get-involved-btn p-2 m-3 flex bg-transparent hover:bg-sky-950 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <BiDonateHeart className="btn-icon m-1" />
+                    Donate
+                </button>
+            </Link>
+            <Link to={`/donate/${locationName}`}>
+                <button className="get-involved-btn p-2 m-3 flex bg-transparent hover:bg-sky-950 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                    <MdOutlineSensorOccupied className="btn-icon m-1" />
+                    Volunteer
+                </button>
+            </Link>
+          </div>
     </div>
   );
 };
 
-export default  LocationBox;
+export default LocationBox;

@@ -30,7 +30,7 @@ const GetInvolved = () => {
                 <Lottie 
                 className="illustration mb-3" 
                 animationData={donate} 
-                loop={true} 
+                loop={false} 
                 />
             </div>
             </div>
@@ -50,6 +50,21 @@ const GetInvolved = () => {
                     </Link>
                 </div>
             </div>
+            {/* <div className="p-6">
+                <h3 className="text-2xl font-bold mb-4">Success Stories</h3>
+                <div className="space-y-4">
+                    <blockquote className="italic text-gray-600">"Thanks to WeHelp, our community now has access to clean water."</blockquote>
+                    <cite className="block text-right text-sm">- Jane Doe</cite>
+                </div>
+            </div>
+            <div className="p-6">
+                <h3 className="text-2xl font-bold mb-4">Upcoming Events</h3>
+                <ul className="list-disc pl-5 space-y-2">
+                    <li className="text-gray-700">Charity Run - June 12, 2023</li>
+                    <li className="text-gray-700">Volunteer Meetup - July 5, 2023</li>
+                </ul>
+            </div> */}
+            
         </div>
         {/* <div class="flex items-center justify-center p-12">
             <div class="mx-auto w-full max-w-[550px]">

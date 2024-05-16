@@ -5,6 +5,7 @@ import Footer from "./Components/Footer";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Locations from "./Components/Locations";
+import Map from "./Components/Map";
 import MoveToTop from "./Components/MoveToTop";
 import Lottie from  "lottie-react";
 import nightsky from "./LottieFiles/night-sky.json";
@@ -51,8 +52,8 @@ function App() {
         <Route path="/about" element={<About/>}/>
         <Route path="/locations" element={<Locations/>}/>
         <Route path="/donate" element={<GetInvolved/>}/>
-        <Route path="/help" element={<GetHelp/>}/>
-        
+        <Route path="/donate/:locationName" component={Map} />      
+        <Route path="/help" element={<GetHelp/>}/>  
       </Routes>
       
       <Footer/>

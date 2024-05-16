@@ -63,7 +63,6 @@ b{
   top: -30px;
 }
 
-
 /* NAVBAR */
 
 .Navbar{
@@ -145,6 +144,11 @@ b{
   display: none;
 }
 
+.centered-container {
+  display: flex;
+  justify-content: center;
+}
+
 @media(max-width:800px){
   .Navbar{
     width: 100%;
@@ -208,7 +212,7 @@ b{
 /* HOME PAGE */
 
 .HomePage{
-  display: flex;
+  display: block;
   justify-content: space-evenly;
   min-height: 80vh;
   margin-top: 100px;
@@ -247,7 +251,7 @@ b{
   }
   .illustration{
     margin: auto;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 }
 
@@ -279,8 +283,7 @@ b{
 .AboutPage{
   display: flex;
   justify-content: space-evenly;
-  min-height: 80vh;
-  margin-top: 150px;
+  margin-top: 90px;
   align-items: center;
   padding: 25px;
 }
@@ -474,7 +477,7 @@ b{
   font-size: 18px;
   line-height: 22px;
   
-  margin: 0px 25px 50px 25px;
+  margin: 25px 25px 55px 25px;
   transition: 0.5s;
 }
 .locationBox:hover{
@@ -507,7 +510,7 @@ b{
 @media(max-width: 500px) {
   .locationHeading{
     margin-top: 30px;
-    margin-bottom: px;
+    margin-bottom: 10px;
   }
 }
 
@@ -616,6 +619,7 @@ footer{
   height: 40px;
   margin: 10px auto;
   margin-top: 80px;
+  margin-bottom: 0px;
   letter-spacing: 0.5px;
   
   display:flex;

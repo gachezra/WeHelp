@@ -38,7 +38,7 @@ const Home = () => {
             <Lottie
               className="illustration p-3"
               animationData={help} 
-              loop={true} 
+              loop={false} 
             />
           </Tilt>
         </div>       
@@ -58,10 +58,12 @@ const Home = () => {
             Our mission is to create a stronger, more resilient community where everyone has access to the help they need. <br/><br/>
             Join us in our journey to make a positive impact and extend a helping hand to those who need it most. Welcome to We Help.
           </p>
-          <button className="get-involved-btn p-2 m-3 mt-6 flex bg-transparent hover:bg-sky-950 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
-              <BiDonateHeart className="btn-icon mr-1" />
-              Get Involved
+          <Link to='/donate'>
+            <button className="get-involved-btn p-2 m-3 mt-6 flex bg-transparent hover:bg-sky-950 text-white font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded">
+                <BiDonateHeart className="btn-icon mr-1" />
+                Get Involved
             </button>
+          </Link>
         </div>
         <Tilt>
           <img className='Avatar' src={helping} alt="helping hand" />
