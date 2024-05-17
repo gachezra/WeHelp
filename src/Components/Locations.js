@@ -16,7 +16,7 @@ const Locations = () => {
   );
 
   return (
-    <div className="HomePage p-4 text-center mx-auto">
+    <div className="HomePage p-8 text-center md:mx-10">
         <h3 className="HomeText text-center text-7xl">We <b>Help</b></h3>
         <input
             type="text"
@@ -29,7 +29,7 @@ const Locations = () => {
             <LocationBox className='mt-7 col-auto' key={location.name} locationName={location.name} locationPhoto={location.photo} onSelect={setSelectedLocation} />
           ))}
         </div>
-        <div className='container p-8 mt-5'>
+        <div className='p-8 mt-5' id="map">
           <h1 className='HomeText'>Directions</h1>
           <Map className='mx-auto' selectedLocation={selectedLocation} />
         </div>

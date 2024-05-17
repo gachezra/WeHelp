@@ -67,7 +67,7 @@ const LocationBox = ({ locationName, locationPhoto, onSelect }) => {
             <ul className="py-2 text-sm text-gray-700 dark:text-gray-200" aria-labelledby="dropdownHoverButton" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(120px, 1fr))' }}>
               {locations.map((location) => (
                 <li key={location.name} style={{ margin: '5px' }}>
-                  <a href={location.url} className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
+                  <a href="#map" className="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-600 dark:hover:text-white"
                     onClick={(e) => {
                       e.preventDefault(); // Prevent the default anchor link behavior
                       handleSelect(location); // Update the selected location
